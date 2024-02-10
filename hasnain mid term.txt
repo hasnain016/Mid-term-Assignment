@@ -1,0 +1,120 @@
+Q:1 
+class BankAccount {
+//   int account_number;
+//   double balance;
+//   String account_type;
+//   double interest_rate;
+
+//   // Constructor
+//   BankAccount(this.account_number, this.balance, this.account_type, this.interest_rate);
+
+//   // Method to deposit money
+//   void deposit(double amount) {
+//     if (amount > 0) {
+//       balance += amount;
+//       print('Deposit successful. New balance: \$${balance.toStringAsFixed(2)}');
+//     } else {
+//       print('Invalid deposit amount.');
+//     }
+//   }
+
+//   // Method to withdraw money
+//   void withdraw(double amount) {
+//     if (amount > 0 && amount <= balance) {
+//       balance -= amount;
+//       print('Withdrawal successful. New balance: \$${balance.toStringAsFixed(2)}');
+//     } else {
+//       print('Invalid withdrawal amount or insufficient funds.');
+//     }
+//   }
+
+//   // Method to add interest to the balance
+//   void addInterest() {
+//     double interest = balance * interest_rate;
+//     balance += interest;
+//     print('Interest added. New balance: \$${balance.toStringAsFixed(2)}');
+//   }
+
+//   // Method to display account information
+//   void display() {
+//     print('Account Number: $account_number');
+//     print('Balance: \$${balance.toStringAsFixed(2)}');
+//     print('Account Type: $account_type');
+//     print('Interest Rate: ${(interest_rate * 100).toStringAsFixed(2)}%');
+//     print('------------------------');
+//   }
+// }
+
+// void main() {
+//   // Create two instances of the BankAccount class
+//   BankAccount account1 = BankAccount(123456, 1000.0, 'Savings', 0.05);
+//   BankAccount account2 = BankAccount(789012, 2000.0, 'Checking', 0.03);
+
+//   // Call methods on the first account
+//   account1.display();
+//   account1.deposit(500.0);
+//   account1.withdraw(200.0);
+//   account1.addInterest();
+//   account1.display();
+
+//   // Call methods on the second account
+//   account2.display();
+//   account2.deposit(1000.0);
+//   account2.withdraw(500.0);
+//   account2.addInterest();
+//   account2.display();
+// }
+Q:2
+class Student {
+  String name;
+  String id;
+  List<String> courses;
+
+  // Constructor
+  Student(this.name, this.id, this.courses);
+
+  // Method to add a course
+  void addCourse(String course) {
+    courses.add(course);
+    print('$course added to ${name} courses');
+  }
+
+  // Method to drop a course
+  void dropCourse(String course) {
+    if (courses.contains(course)) {
+      courses.remove(course);
+      print('$course dropped from ${name} courses');
+    } else {
+      print('${name} is not enrolled in $course.');
+    }
+  }
+
+  // Method to display courses
+  void displayCourses() {
+    print('${name}\'s Courses:');
+    for (String course in courses) {
+      print('- $course');
+    }
+    print('------------------------');
+  }
+}
+
+void main() {
+  // Create two instances of the Student class
+  Student student1 = Student('John Doe', '123456', ['Math', 'History', 'English']);
+  Student student2 = Student('Jane Smith', '789012', ['Physics', 'Chemistry', 'Biology']);
+
+  // Call methods on the first student
+  student1.displayCourses();
+  student1.addCourse('Computer Science');
+  student1.dropCourse('History');
+  student1.displayCourses();
+
+  // Call methods on the second student
+  student2.displayCourses();
+  student2.addCourse('Spanish');
+  student2.dropCourse('Biology');
+  student2.displayCourses();
+}
+
+  
